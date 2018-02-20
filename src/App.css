@@ -1,0 +1,130 @@
+/* General CSS (app stuff and element selectors */
+  * {
+    height: auto;
+    width:auto ;
+    position: relative;
+    color: white;
+    font-family: 'Robo Mono', monospace;
+    
+  }
+  html{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+  .App {
+    margin-top: 0rem;
+    text-align: center;
+    background-color: black;
+  }
+
+  .user-pic {
+    height: 5rem;
+    float: right;
+    border-radius: 3rem;
+    background-color: white;
+  }
+  .user-pic-custom{
+    height: 5rem;
+    float: right;
+    border-radius: 3rem;
+    margin-top: .2rem;
+    background-color: white;
+  }
+  .App-header {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    background-color: #222;
+    height: 6.5rem;
+    padding: 1rem;
+    color: white;
+    
+  }
+
+  .App-title {
+    margin-top: 1rem;
+    float: left;
+    font-size: 1.5em;
+    background-color:#222; 
+    left:10rem;
+  }
+  .App-intro {
+    font-size: large;
+  }
+
+  .App-Footer{
+    background: gray;
+    color: white;
+    position: relative;
+    bottom: 0rem;
+    margin-bottom: 0;
+  }
+  .body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+  }
+/* Game Css */
+  .Current-Games{
+    position: relative;
+    background: white;
+    text-align: center;
+    height: 18rem;
+
+  }
+  .CurrentGames {
+    text-align: center;
+    background: gray;
+    position: relative;
+    height: 18rem;
+  }
+
+  .CurrentGames ul li{
+    display: inline-block;
+    text-decoration: none;
+    max-width:1rem ;
+    max-height:2rem ;
+
+    text-align: center;
+    position: relative;
+    
+  }
+  .List-of-Three .row .col-3{
+    margin-top: 1.5rem;
+  }
+  .GameBoxArt {
+    max-width:15rem ;
+    max-height:15rem ;
+  }
+
+/* Console CSS */
+  .Owned-Consoles{
+    height: 22rem;
+  }
+  .SystemList{
+    margin-bottom: 1rem;
+    height: 5rem;
+  }
+  .SystemList .row{
+    height: 3rem;
+    margin-bottom: 0rem;
+  }
+  
+/* Nav(account alterations) */
+  .Collapsable-Nav{
+    position: fixed;
+    z-index: 10;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    width:1rem ;
+    height:2rem ;
+    top: 0;
+    left: 0;
+  }
+  .triline{
+    margin-top:.2rem;
+    margin-bottom: .2rem;
+    height:.2rem;
+    width:1rem;
+    background: black
+  }

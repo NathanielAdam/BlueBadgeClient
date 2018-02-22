@@ -1,6 +1,5 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import LoginModal from './User/Login'
 export default class Navigation extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +12,7 @@ export default class Navigation extends React.Component {
 
   toggle() {
     this.setState({
+      
       dropdownOpen: !this.state.dropdownOpen
     });
   }
@@ -25,14 +25,14 @@ export default class Navigation extends React.Component {
           <div className="triline"></div>
           <div className="triline"></div>
         </DropdownToggle>
-        <DropdownMenu>
+        <DropdownMenu className="CollapsableNav center-this">
           <DropdownItem header>Header</DropdownItem>
-          <LoginModal/>
-          <DropdownItem>Another Action</DropdownItem>
+          <DropdownItem className="center-this hide">Another Action</DropdownItem>
           <DropdownItem divider />
-          <DropdownItem className="login Button">Login</DropdownItem>
+          <DropdownItem></DropdownItem>
         </DropdownMenu>
       </ButtonDropdown>
     );
   }
+  
 }

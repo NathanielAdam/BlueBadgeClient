@@ -8,6 +8,7 @@
     
   }
   html{
+    height: 100%;
     margin-top: 0rem;
     margin-bottom: 0rem;
   }
@@ -55,7 +56,7 @@
     background: gray;
     color: white;
     position: relative;
-    bottom: 0rem;
+    bottom: -1.4rem;
     margin-bottom: 0;
   }
   .body{
@@ -67,36 +68,39 @@
 /* Game Css */
   .Current-Games{
     position: relative;
-    background: white;
+    background: gray;
     text-align: center;
-    height: 18rem;
+    height: 23rem;
 
   }
   .CurrentGames {
     text-align: center;
     background: gray;
     position: relative;
-    height: 18rem;
+    height: 20rem;
+    width: 100%;
   }
-
-  .CurrentGames ul li{
-    display: inline-block;
-    text-decoration: none;
-    max-width:1rem ;
-    max-height:2rem ;
-
-    text-align: center;
-    position: relative;
-    
+  .game-placeHolder{
+    height:15rem;
+    width: 10rem;
+    background-color: black;
+    margin: 1.5rem;
   }
-  .List-of-Three .row .col-3{
-    margin-top: 1.5rem;
+  .game-art{
+    height:100%;
+    width: 50%;
   }
-  .GameBoxArt {
-    max-width:15rem ;
-    max-height:15rem ;
+  .row{
+    width: 100%
   }
-
+  .col button{
+    width:100%;
+    margin-top: 0;
+  }
+  .col button img{
+    width: 1rem;
+    height: 1rem;
+  } 
 /* Console CSS */
   .Owned-Consoles{
     height: 22rem;
@@ -127,4 +131,51 @@
     height:.2rem;
     width:1rem;
     background: black
+  }
+  .CollapsableNav{
+    width: 20rem;
+    padding: 1px;
+  }
+  .center-this{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+  }
+  .login-signup li{
+    display: inline-block;
+    margin-right: 2rem;
+    max-width: 5rem;
+  }
+  .dropdown-item{
+    text-align: center;
+  }
+  button .btn .btn-secondary{
+    border: none;
+  }
+/* Sign-up/Login modals */
+  .Su-Label{
+    z-index: 100;
+    color: black;
+  }
+  .input-align{
+    float: left;
+    width: 100%;
+  }
+  .email-label{
+    padding-left:.4rem;
+  }
+/* General Use Classes */
+   .hide{
+    display: none;
+  }
+  .padding-0{
+    text-align: center;
+    padding-right:0;
+    padding-left:0;
+  }
+  .modal{
+    z-index: 1000000000000000;
+  }
+  .Paint-it-Black{
+    color: black;
   }

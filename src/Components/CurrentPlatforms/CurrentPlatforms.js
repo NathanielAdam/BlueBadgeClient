@@ -28,15 +28,19 @@ export default class CurrentPlatform extends Component{
                     <Row>
                         <Col></Col>
                         <Col>
-                            <img src="http://www.iconarchive.com/download/i77881/prepaidgamecards/gaming-gadgets/PlayStation-4.ico" alt="Test-Image"/>
+                            <img 
+                            src="http://www.iconarchive.com/download/i77881/prepaidgamecards/gaming-gadgets/PlayStation-4.ico" 
+                            alt="Test"/>
                             <h4>Place holder Text</h4>
                         </Col>
                         <Col>
-                            <img src="http://www.iconarchive.com/download/i77881/prepaidgamecards/gaming-gadgets/PlayStation-4.ico" alt="Test-Image"/>
+                            <img src="http://www.iconarchive.com/download/i77881/prepaidgamecards/gaming-gadgets/PlayStation-4.ico" 
+                            alt="Test"/>
                             <h4>Place holder Text</h4>
                         </Col>
                         <Col>
-                            <img src="http://www.iconarchive.com/download/i77881/prepaidgamecards/gaming-gadgets/PlayStation-4.ico" alt="Test-Image"/>
+                            <img src="http://www.iconarchive.com/download/i77881/prepaidgamecards/gaming-gadgets/PlayStation-4.ico" 
+                            alt="Test"/>
                             <h4>Place holder Text</h4>
                         </Col>
                     </Row>

@@ -34,7 +34,7 @@ import { Col, Button, Modal, ModalBody, ModalHeader, ModalFooter, Container, Row
             this.FetchImages()
         }
 
-        FetchImages(){fetch("http://localhost:3000/api/games", {
+        FetchImages(){fetch("https://bluebadgeserver.herokuapp.com/api/games", {
                 method: 'GET',
                 headers: new Headers({
                     'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ import { Col, Button, Modal, ModalBody, ModalHeader, ModalFooter, Container, Row
         }
         HandleDelete(event){
             
-            fetch("http://localhost:3000/api/games", {
+            fetch("https://bluebadgeserver.herokuapp.com/api/games", {
                 method: 'DELETE',
                 body: JSON.stringify({game:{id:event.target.id}}),
                 headers: new Headers({
@@ -112,7 +112,7 @@ import { Col, Button, Modal, ModalBody, ModalHeader, ModalFooter, Container, Row
                 }
             }
             
-            fetch("http://localhost:3000/api/games", {
+            fetch("https://bluebadgeserver.herokuapp.com/api/games", {
                 method: 'POST',
                 body: JSON.stringify(postData),
                 headers: new Headers({
@@ -139,7 +139,7 @@ import { Col, Button, Modal, ModalBody, ModalHeader, ModalFooter, Container, Row
                 gameImg:this.state.gameImg
                 }
             }
-            fetch("http://localhost:3000/api/games", {
+            fetch("https://bluebadgeserver.herokuapp.com/api/games", {
                 method:'PUT',
                 body: JSON.stringify(postData),
                 headers: new Headers({

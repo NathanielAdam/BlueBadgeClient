@@ -38,7 +38,7 @@ class SignupModal extends React.Component {
     event.preventDefault()
 }
 handleSubmit(event) {
-  fetch("http://localhost:3000/api/user", {
+  fetch("https://bluebadgeserver.herokuapp.com/api/user", {
       method: 'POST',
       body: JSON.stringify({user:this.state}),
       headers: new Headers({

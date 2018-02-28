@@ -31,7 +31,7 @@ export default class ConsoleSubmition extends React.Component {
         this.FetchConsoleImages()
     }
 
-    FetchConsoleImages(){fetch("http://localhost:3000/api/consoles", {
+    FetchConsoleImages(){fetch("https://bluebadgeserver.herokuapp.com/api/consoles", {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ export default class ConsoleSubmition extends React.Component {
     }
     HandleConsoleDelete(event){
         console.log(event.target.id)
-        fetch("http://localhost:3000/api/consoles", {
+        fetch("https://bluebadgeserver.herokuapp.com/api/consoles", {
             method: 'DELETE',
             body: JSON.stringify({id:event.target.id}),
             headers: new Headers({
@@ -117,7 +117,7 @@ export default class ConsoleSubmition extends React.Component {
             
         }
         
-        fetch("http://localhost:3000/api/consoles", {
+        fetch("https://bluebadgeserver.herokuapp.com/api/consoles", {
             method: 'POST',
             body: JSON.stringify({GameSystem:postData}),
             headers: new Headers({

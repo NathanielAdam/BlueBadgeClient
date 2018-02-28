@@ -24,7 +24,7 @@ class LoginModal extends React.Component {
 }
 
 handleSubmit(event) {
-    fetch("http://localhost:3000/api/login", {
+    fetch("https://bluebadgeserver.herokuapp.com/api/login", {
         method: 'POST',
         body: JSON.stringify({user:this.state}),
         headers: new Headers({

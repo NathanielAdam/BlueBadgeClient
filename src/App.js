@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import logo from './profileAssets/defaultProfile.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
+import logo from './profileAssets/defaultProfile.png';
 import CurrentGame from './Components/CurrentGames/CurrentGames'
-import CurrentPlatform from './Components/CurrentPlatforms/CurrentPlatforms'
+import ConsoleList from './Components/CurrentConsole/ConsoleList'
 import Navigation from './Components/Nav/Nav'
 import ErrorBoundary from './Components/User/error'
 import Footer from './Components/Footer/Footer'
 import Auth from './Components/User/Auth'
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -46,25 +50,15 @@ class App extends Component {
     if(localStorage.token){
       return (
         <div className="App">
-          <div className="body">
+          
           <header className="App-header">
-            <img src={logo} className="user-pic" alt="logo" />
+          <Navigation setToken={this.setSessionState} logout={this.logout}/>
+            <img src={logo} className="user-pic" alt="logo" />  
             <h1 className="App-title">Game Time Organization</h1>
-          </header>
-            <div className="Collapsable-Nav">
-            <Navigation setToken={this.setSessionState}/>
-            </div>
-            <div className="Current-Games">
-            <CurrentGame setToken={this.setSessionState}/>
-
-            </div>
-            <div className="Owned-Consoles">
-            <CurrentPlatform setToken={this.setSessionState}/>
-            </div>
-            <footer className="App-Footer">
-            <Footer setToken={this.setSessionState}/>
-            </footer>
-          </div>
+          </header>                      
+            
+            <CurrentGame Token={this.state.sessionToken}/>
+            <ConsoleList Token={this.state.sessionToken}/>
         </div>
 
       );
@@ -74,21 +68,21 @@ class App extends Component {
           <div className="body">
           <header className="App-header">
             <img src={logo} className="user-pic" alt="logo" />
-            <h1 className="App-title">Game Time Organization</h1>
-            <ErrorBoundary><Auth setToken={this.setSessionState}/></ErrorBoundary>
+            <h1 id="makeMeBig" className="App-title">Please log in or sign up before proceeding</h1>
+            
           </header>
             <div className="Collapsable-Nav">
-            <Navigation setToken={this.setSessionState}/>
+            
             </div>
             <div className="Current-Games">
-            <CurrentGame setToken={this.setSessionState}/>
-
+              
+              <Auth setToken={this.setSessionState}/>
             </div>
             <div className="Owned-Consoles">
-            <CurrentPlatform setToken={this.setSessionState}/>
+              
             </div>
             <footer className="App-Footer">
-            <Footer setToken={this.setSessionState}/>
+            <Footer/>
             </footer>
           </div>
         </div>

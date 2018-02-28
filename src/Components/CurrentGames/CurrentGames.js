@@ -1,23 +1,35 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import GameList from './GameList'
-import GameSubmitUpdate from './GameSubmission&Update'
-const CurrentGame= (props) => {
+
+
+export default class CurrentGame extends React.Component{
+    constructor(props) {
+        super(props)
+    }
+    render(){
+        // console.log(this.props)
         return(
             
             
-                <Container className="List-of-Three">
+            <div>
+                <h2>Games</h2>
+                <Container id="dontTestMeCss">
                     <Row>
-                        <GameList setToken={this.setSessionState} gameOne={props.gameOne}/>
-                        <GameList setToken={this.setSessionState} gameOne={props.gameOne}/>
-                        <GameList setToken={this.setSessionState} gameOne={props.gameOne}/>
-
-                        
+                        <GameList Token={this.props.Token} gameOne={this.gameOne=1}/>
+                        <GameList Token={this.props.Token} gameTwo={this.gameTwo=2}/>
+                        <GameList Token={this.props.Token} gameThree={this.gameThree=3}/>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <p className="section-exp">Here Put three Games that you are wanting to play when you have time</p>
+                        </Col>
                     </Row>
                 </Container>
-            
+            </div>
                 
             
+     
         )
+    }
 }
-export default CurrentGame

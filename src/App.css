@@ -1,23 +1,47 @@
-/* General CSS (app stuff and element selectors */
+/* general css */
   * {
     height: auto;
     width:auto ;
     position: relative;
     color: white;
     font-family: 'Robo Mono', monospace;
-    
+    vertical-align: middle;
   }
+  #style-remove{
+    background-color: white
+  }
+  #boxArt{
+    
+    top:0rem;
+    height: auto;
+    vertical-align: middle;
+  }
+  .section-exp{
+    text-align: center;
+  }
+  .button{
+    z-index: 100;
+  }
+
   html{
     height: 100%;
     margin-top: 0rem;
     margin-bottom: 0rem;
+  }
+  div{
+    vertical-align: middle;
   }
   .App {
     margin-top: 0rem;
     text-align: center;
     background-color: black;
   }
-
+  .image-wrapper{
+    vertical-align: middle;
+    height: 100%;
+    width: 15rem;
+    margin: 0 25% 0 25%; 
+  }
   .user-pic {
     height: 5rem;
     float: right;
@@ -25,7 +49,8 @@
     background-color: white;
   }
   .user-pic-custom{
-    height: 5rem;
+    max-height: 5rem;
+    max-width: 5rem;
     float: right;
     border-radius: 3rem;
     margin-top: .2rem;
@@ -40,7 +65,9 @@
     color: white;
     
   }
-
+  #navigation{
+    float: left;
+  }
   .App-title {
     margin-top: 1rem;
     float: left;
@@ -65,13 +92,30 @@
     text-align: center;
     margin-bottom: 0;
   }
-/* Game Css */
+/* game css */
+  div .List-of-Three .container {
+    margin: 0 0 0 0;
+  }
+  div #dontTestMeCss{
+    width: 100%;
+    margin-left:0;
+    margin-right:0;
+    background: gray; 
+    vertical-align: middle;
+  }
+  .container{
+    width:100%;
+    
+    margin-left: 0rem;
+    margin-right: 0;
+    vertical-align: middle;
+  }
   .Current-Games{
     position: relative;
     background: gray;
     text-align: center;
-    height: 23rem;
-
+    height: 25rem;
+    vertical-align: middle;
   }
   .CurrentGames {
     text-align: center;
@@ -79,29 +123,75 @@
     position: relative;
     height: 20rem;
     width: 100%;
+    vertical-align: middle;
   }
-  .game-placeHolder{
-    height:15rem;
-    width: 10rem;
-    background-color: black;
-    margin: 1.5rem;
+
+  .col img{
+    max-height: 24rem;
+    max-width: 15rem;
+    vertical-align: middle;
   }
   .game-art{
     height:100%;
     width: 50%;
+    vertical-align: middle;
   }
   .row{
-    width: 100%
+    width: 100%;
+    vertical-align: middle;
   }
   .col button{
-    width:100%;
+    position: relative;
+    width:3rem;
+    top:0rem;
     margin-top: 0;
+    z-index: 1;
+    background: transparent;
+    border: none;
+  }
+  #modal-button {
+    height:2rem;
+    width:15rem;
+    bottom:100rem;
+    left: 1.7rem;
+    border-radius:0;
+    margin-top: 0;
+    z-index: 1;
+    background: whitesmoke;
+  }
+  #modal-console-button {
+    height:2rem;
+    width:15rem;
+    bottom:100rem;
+    
+    border-radius:0;
+    margin-top: 0;
+    z-index: 1;
+    background: whitesmoke;
+  }
+  #modal-button:hover{
+    background: floralwhite;
   }
   .col button img{
     width: 1rem;
     height: 1rem;
+    vertical-align: middle;
   } 
-/* Console CSS */
+  .game-placeholder{
+    vertical-align: middle;
+  }
+
+/* console css */
+  #consoleArt{
+    max-width: 12rem;
+    max-height: 12rem;
+  }
+  #consoleContainer{
+    width: 100%;
+    height: auto;
+    background: gray;
+    vertical-align: middle;
+  }
   .Owned-Consoles{
     height: 22rem;
   }
@@ -113,8 +203,6 @@
     height: 3rem;
     margin-bottom: 0rem;
   }
-  
-/* Nav(account alterations) */
   .Collapsable-Nav{
     position: fixed;
     z-index: 10;
@@ -133,8 +221,10 @@
     background: black
   }
   .CollapsableNav{
+    float: left;
     width: 20rem;
     padding: 1px;
+    z-index: 100;
   }
   .center-this{
     position: relative;
@@ -152,7 +242,7 @@
   button .btn .btn-secondary{
     border: none;
   }
-/* Sign-up/Login modals */
+
   .Su-Label{
     z-index: 100;
     color: black;
@@ -164,7 +254,7 @@
   .email-label{
     padding-left:.4rem;
   }
-/* General Use Classes */
+
    .hide{
     display: none;
   }
@@ -173,9 +263,14 @@
     padding-right:0;
     padding-left:0;
   }
-  .modal{
-    z-index: 1000000000000000;
-  }
+
   .Paint-it-Black{
     color: black;
   }
+  .col{
+    vertical-align: middle;
+  }
+  .console-placeholder{
+    vertical-align: middle;
+  }
+/* the rest of the css */

@@ -34,6 +34,7 @@ handleSubmit(event) {
       
         (response) => response.json()
     ).then((data) => {
+      console.log(this)
         this.props.setToken(data.sessionToken)
       console.log(data)
       this.setState({

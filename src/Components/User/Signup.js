@@ -16,7 +16,7 @@ class SignupModal extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
-    this.validateSignUp = this.validateSignUp.bind(this)
+    // this.validateSignUp = this.validateSignUp.bind(this)
    
     
     this.toggle = this.toggle.bind(this);
@@ -29,8 +29,10 @@ class SignupModal extends React.Component {
     
   }
   handleChange(event) {
+    console.log("handleChange", event.target.value)
     this.setState({
-        [event.target.name]: event.target.value,
+        [event.target.name]: event.target.value
+        
     });
     
     event.preventDefault()
@@ -40,13 +42,12 @@ handleSubmit(event) {
       method: 'POST',
       body: JSON.stringify({user:this.state}),
       headers: new Headers({
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json"
         })
 
-  }).then(
-      (response) => response.json()
+  }).then(response => response.json()
   ).then((data) => {
-
+  
   this.props.setToken(data.sessionToken)
   this.setState({
     modal:false
@@ -54,11 +55,11 @@ handleSubmit(event) {
   }) 
   event.preventDefault()
 }
-  validateSignUp(event){
+  // validateSignUp(event){
     
-    event.preventDefault()
+  //   event.preventDefault()
     
-  }
+  // }
 
   render() {
     
@@ -66,48 +67,48 @@ handleSubmit(event) {
       <div>
         <Button onClick={this.toggle}>Sign up</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-        <form>
-          <ModalHeader toggle={this.toggle} className="Su-Label">
-                Sign up
-          </ModalHeader>
-          <ModalBody>
-            <Container>
-              
-              <Row className="">
-              
-                <Col xs="3">
-                  <label className="Su-Label email-label">Email</label>
-                </Col>
-                <Col className="padding-0">
-                  <input ref="email" name="email" className="input-align Su-Email Paint-it-Black" onChange={this.handleChange} type="email" placeholder="test@test.com"/>
-                </Col>
-              </Row>
+          <form>
+            <ModalHeader toggle={this.toggle} className="Su-Label">
+                  Sign up
+            </ModalHeader>
+            <ModalBody>
+              <Container>
+                
+                <Row className="">
+                
+                  <Col xs="3">
+                    <label className="Su-Label email-label">Email</label>
+                  </Col>
+                  <Col className="padding-0">
+                    <input ref="email" name="email" className="input-align Su-Email Paint-it-Black" onChange={this.handleChange} type="email" placeholder="test@test.com"/>
+                  </Col>
+                </Row>
 
-              <Row className="">
+                <Row className="">
+                  <Col xs="3" className="padding-0">
+                    <label className="Su-Label">Username</label>
+                  </Col>
+                  <Col className="padding-0">
+                    <input ref="username" name="username" className="input-align Su-Username Paint-it-Black" onChange={this.handleChange} type="text" placeholder="test"/>
+                  </Col>
+                </Row>
+                
+                <Row className="">
                 <Col xs="3" className="padding-0">
-                  <label className="Su-Label">Username</label>
+                  <label className="Su-Label">Password</label>
                 </Col>
-                <Col className="padding-0">
-                  <input ref="username" name="username" className="input-align Su-Username Paint-it-Black" onChange={this.handleChange} type="text" placeholder="test"/>
+                <Col xs="9" className="padding-0">
+                  <input ref="password" name="password" className="input-align Su-Password Paint-it-Black" type ="password" onChange={this.handleChange} placeholder="P@$$w0rD"/>
                 </Col>
-              </Row>
-              
-              <Row className="">
-              <Col xs="3" className="padding-0">
-                <label className="Su-Label">Password</label>
-              </Col>
-              <Col xs="9" className="padding-0">
-                <input ref="password" name="password" className="input-align Su-Password Paint-it-Black" type ="password" onChange={this.handleChange} placeholder="P@$$w0rD"/>
-              </Col>
-              </Row>
-            </Container>
-          </ModalBody>
-          <ModalFooter>
-            <Button color="primary" onClick={this.handleSubmit} type="submit">Sign Up</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-          </ModalFooter>
-        </form>
-        </Modal>
+                </Row>
+              </Container>
+            </ModalBody>
+            <ModalFooter>
+              <Button color="primary" onClick={this.handleSubmit} type="submit">Sign Up</Button>{' '}
+              <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+            </ModalFooter>
+          </form>
+         </Modal>
       </div>
     );
   }

@@ -9,6 +9,9 @@ export default class Footer extends Component {
             <div>
                 <Container>
                     <Row>
+                    
+                    </Row>
+                    <Row>
                         <Col>
                             <h5 className="Su-Label">Contact Me</h5>
                         </Col>

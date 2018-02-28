@@ -57,18 +57,18 @@ handleSubmit(event) {
     return (
       
       <div>
-        <Button onClick={this.toggle}>Login</Button>
+        <Button id="login-button" onClick={this.toggle}>Login</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader className="Su-Label" toggle={this.toggle}>Login</ModalHeader>
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <ModalBody>
               <Container>
                 <Row>
                   <Col xs="3" className="padding-0">
-                    <label className="Su-Label">Username</label>
+                    <label  className="Su-Label">Username</label>
                   </Col>
                   <Col className="padding-0">
-                    <input onChange={this.handleChange} ref="username" name="username" className="input-align Paint-it-Black" type="text" placeholder="test"/>
+                    <input require onChange={this.handleChange} ref="username" name="username" className="input-align Paint-it-Black" type="text" placeholder="test"/>
                   </Col>
                 </Row>
                 
@@ -77,13 +77,13 @@ handleSubmit(event) {
                     <label className="Su-Label">Password</label>
                   </Col>
                   <Col xs="9" className="padding-0">
-                    <input onChange={this.handleChange} ref="password" name="password" className="input-align Paint-it-Black" type ="password" placeholder="P@$$w0rD"/>
+                    <input require onChange={this.handleChange} ref="password" name="password" className="input-align Paint-it-Black" type ="password" placeholder="P@$$w0rD"/>
                   </Col>
                 </Row>
               </Container>
             </ModalBody>
             <ModalFooter>
-              <Button color="primary" onClick={this.handleSubmit}>Login</Button>{' '}
+              <Button color="primary" >Login</Button>{' '}
               <Button color="secondary" onClick={this.toggle}>Cancel</Button>
             </ModalFooter>
           </form>

@@ -45,7 +45,8 @@ handleSubmit(event) {
           "Content-Type": "application/json"
         })
 
-  }).then(response => response.json()
+  }).then(response => response.json(),
+    alert('rejected signup info')
   ).then((data) => {
   
   this.props.setToken(data.sessionToken)
@@ -65,9 +66,9 @@ handleSubmit(event) {
     
     return (
       <div>
-        <Button onClick={this.toggle}>Sign up</Button>
+        <Button id="signup-button" onClick={this.toggle}>Sign up</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <ModalHeader toggle={this.toggle} className="Su-Label">
                   Sign up
             </ModalHeader>
@@ -80,7 +81,7 @@ handleSubmit(event) {
                     <label className="Su-Label email-label">Email</label>
                   </Col>
                   <Col className="padding-0">
-                    <input ref="email" name="email" className="input-align Su-Email Paint-it-Black" onChange={this.handleChange} type="email" placeholder="test@test.com"/>
+                    <input require ref="email" name="email" className="input-align Su-Email Paint-it-Black" onChange={this.handleChange} type="email" placeholder="test@test.com"/>
                   </Col>
                 </Row>
 
@@ -89,7 +90,7 @@ handleSubmit(event) {
                     <label className="Su-Label">Username</label>
                   </Col>
                   <Col className="padding-0">
-                    <input ref="username" name="username" className="input-align Su-Username Paint-it-Black" onChange={this.handleChange} type="text" placeholder="test"/>
+                    <input require ref="username" name="username" className="input-align Su-Username Paint-it-Black" onChange={this.handleChange} type="text" placeholder="test"/>
                   </Col>
                 </Row>
                 
@@ -98,13 +99,13 @@ handleSubmit(event) {
                   <label className="Su-Label">Password</label>
                 </Col>
                 <Col xs="9" className="padding-0">
-                  <input ref="password" name="password" className="input-align Su-Password Paint-it-Black" type ="password" onChange={this.handleChange} placeholder="P@$$w0rD"/>
+                  <input require ref="password" name="password" className="input-align Su-Password Paint-it-Black" type ="password" onChange={this.handleChange} placeholder="P@$$w0rD"/>
                 </Col>
                 </Row>
               </Container>
             </ModalBody>
             <ModalFooter>
-              <Button color="primary" onClick={this.handleSubmit} type="submit">Sign Up</Button>{' '}
+              <Button color="primary"  type="submit">Sign Up</Button>{' '}
               <Button color="secondary" onClick={this.toggle}>Cancel</Button>
             </ModalFooter>
           </form>

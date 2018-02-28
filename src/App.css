@@ -274,3 +274,11 @@
     vertical-align: middle;
   }
 /* the rest of the css */
+#login-button {
+  width: 100%;
+  background: whitesmoke;
+}
+#signup-button{
+  width: 100%;
+  background: white;
+}

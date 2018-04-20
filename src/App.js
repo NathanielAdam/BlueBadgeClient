@@ -59,6 +59,9 @@ class App extends Component {
             
             <CurrentGame Token={this.state.sessionToken}/>
             <ConsoleList Token={this.state.sessionToken}/>
+            <div className="instructions">
+              
+            </div>
         </div>
 
       );
@@ -74,9 +77,10 @@ class App extends Component {
             <div className="Collapsable-Nav">
             
             </div>
-            <div className="Current-Games">
+            <div className="Current-Games" >
               
               <Auth setToken={this.setSessionState}/>
+              <h5 className="FIXTHIS">Choose to sign in if you have an accout, or if you're new register to begin organizing your games!</h5>
             </div>
             <div className="Owned-Consoles">
               
